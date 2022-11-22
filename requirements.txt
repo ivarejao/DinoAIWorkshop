@@ -1,6 +1,6 @@
 numpy
 sklearn
-pygad
+pygad==2.17.0
 pygame
 experta
 torch
