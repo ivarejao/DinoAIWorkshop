@@ -1,4 +1,3 @@
-from statistics import mean,stdev
 import pygame
 import os
 import random
@@ -387,8 +386,6 @@ def playGame(population):
     return solution_fitness
 
 
-
-from scipy import stats
 import numpy as np
 import torch
 import pygad
@@ -501,14 +498,9 @@ def train(init_sol = None):
 def eval(s_name):
     solution = torch.load(s_name)
 
-    num_test = 30
-    results = []
-    for i in range(num_test):
-        results += [playGame([solution])[0]]
+    score = playGame([solution])[0]
     
-    print(f"Resultados = {results}")
-    print(f"Média = {mean(results)}")
-    print(f"Desvio Padrão = {stdev(results)}")
+    print(f"Resultados = {score}")
 
 
 

@@ -3,3 +3,4 @@ sklearn
 pygad
 pygame
 experta
+torch
